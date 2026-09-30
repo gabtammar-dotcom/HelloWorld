@@ -1,5 +1,6 @@
 package com.example.helloworld;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
@@ -20,9 +21,14 @@ public class MainActivity extends AppCompatActivity {
 
         TextView textView = findViewById(R.id.textView);
         Button textChangeButton = findViewById(R.id.textChangeButton);
+        Button colorChangeButton = findViewById(R.id.colorChangeButton);
 
         textChangeButton.setOnClickListener(v -> {
             textView.setText("Labas!");
+        });
+
+        colorChangeButton.setOnClickListener(v -> {
+            textView.setTextColor(Color.RED);
         });
     }
 }
